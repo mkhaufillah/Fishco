@@ -16,10 +16,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
+import com.squareup.picasso.Picasso
 import com.yarolegovich.lovelydialog.LovelyChoiceDialog
 import es.dmoral.toasty.Toasty
 import id.fishco.fishco.R
-import id.fishco.fishco.adapter.helper.ImageUploadContainerActivity
+import id.fishco.fishco.transactions.ImageUploadContainerActivity
 import id.fishco.fishco.adapter.helper.TimerCustom
 import id.fishco.fishco.adapter.loading.RvLoadingViewHolder
 import id.fishco.fishco.data.Credential
@@ -28,10 +29,11 @@ import id.fishco.fishco.model.Payment
 import id.fishco.fishco.model.ProductContainer
 import id.fishco.fishco.model.TransactionContainer
 import id.fishco.fishco.payment.PaymentActivity
+import id.fishco.fishco.transactions.TransactionsFragment
 import java.text.NumberFormat
 import java.util.*
 
-class RvTransactionAdapter(private val activity: Activity, private val context: Context, private val transactions: ArrayList<TransactionContainer>)
+class RvTransactionAdapter(private val fragment: TransactionsFragment, private val activity: Activity, private val context: Context, private val transactions: ArrayList<TransactionContainer>)
     : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val inflater = LayoutInflater.from(context)
@@ -110,7 +112,7 @@ class RvTransactionAdapter(private val activity: Activity, private val context: 
 
         val intent = Intent(context, ImageUploadContainerActivity::class.java)
         intent.putExtra(Credential.KEY_SHARE, transactions[vHolder.adapterPosition].id)
-        context.startActivity(intent)
+        fragment.startActivityForResult(intent, Credential.CODE_UPLOAD)
     }
 
     init {
@@ -213,24 +215,34 @@ class RvTransactionAdapter(private val activity: Activity, private val context: 
                         holder1.transactionStatus?.text = context.getString(R.string.t01)
                         holder1.transactionConfirm?.visibility = View.GONE
                         holder1.transactionUpload?.visibility = View.VISIBLE
+                        holder1.transactionUploadReceipt?.visibility = View.GONE
                         holder1.transactionTrack?.visibility = View.GONE
                         holder1.transactionQuestion?.visibility = View.VISIBLE
                         holder1.transactionDeliverConfirm?.visibility = View.GONE
                         holder1.transactionComplain?.visibility = View.GONE
+                        holder1.transactionUpload?.setOnClickListener(listenerUpload)
+                        holder1.transactionUpload?.tag = holder1
                     }
                     1 -> {
                         holder1.transactionStatus?.text = context.getString(R.string.t01)
                         holder1.transactionConfirm?.visibility = View.GONE
-                        holder1.transactionUpload?.visibility = View.VISIBLE
+                        holder1.transactionUpload?.visibility = View.GONE
+                        holder1.transactionUploadReceipt?.visibility = View.VISIBLE
                         holder1.transactionTrack?.visibility = View.GONE
                         holder1.transactionQuestion?.visibility = View.VISIBLE
                         holder1.transactionDeliverConfirm?.visibility = View.GONE
                         holder1.transactionComplain?.visibility = View.GONE
+                        Picasso.get()
+                                .load(transactions[position].imageConfirmReceipt.toString())
+                                .placeholder(R.color.colorPrimaryDark)
+                                .error(R.color.colorPrimaryDark)
+                                .into(holder1.transactionUploadReceipt)
                     }
                     2 -> {
                         holder1.transactionStatus?.text = context.getString(R.string.t2)
                         holder1.transactionConfirm?.visibility = View.GONE
                         holder1.transactionUpload?.visibility = View.GONE
+                        holder1.transactionUploadReceipt?.visibility = View.GONE
                         holder1.transactionTrack?.visibility = View.GONE
                         holder1.transactionQuestion?.visibility = View.VISIBLE
                         holder1.transactionDeliverConfirm?.visibility = View.GONE
@@ -240,6 +252,7 @@ class RvTransactionAdapter(private val activity: Activity, private val context: 
                         holder1.transactionStatus?.text = context.getString(R.string.t3)
                         holder1.transactionConfirm?.visibility = View.GONE
                         holder1.transactionUpload?.visibility = View.GONE
+                        holder1.transactionUploadReceipt?.visibility = View.GONE
                         holder1.transactionTrack?.visibility = View.GONE
                         holder1.transactionQuestion?.visibility = View.VISIBLE
                         holder1.transactionDeliverConfirm?.visibility = View.GONE
@@ -249,6 +262,7 @@ class RvTransactionAdapter(private val activity: Activity, private val context: 
                         holder1.transactionStatus?.text = context.getString(R.string.t4)
                         holder1.transactionConfirm?.visibility = View.GONE
                         holder1.transactionUpload?.visibility = View.GONE
+                        holder1.transactionUploadReceipt?.visibility = View.GONE
                         holder1.transactionTrack?.visibility = View.VISIBLE
                         holder1.transactionQuestion?.visibility = View.VISIBLE
                         holder1.transactionDeliverConfirm?.visibility = View.GONE
@@ -258,6 +272,7 @@ class RvTransactionAdapter(private val activity: Activity, private val context: 
                         holder1.transactionStatus?.text = context.getString(R.string.t5)
                         holder1.transactionConfirm?.visibility = View.GONE
                         holder1.transactionUpload?.visibility = View.GONE
+                        holder1.transactionUploadReceipt?.visibility = View.GONE
                         holder1.transactionTrack?.visibility = View.GONE
                         holder1.transactionQuestion?.visibility = View.VISIBLE
                         holder1.transactionDeliverConfirm?.visibility = View.GONE

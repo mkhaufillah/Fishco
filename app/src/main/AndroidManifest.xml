@@ -68,7 +68,7 @@
         <activity android:name=".product.review.ReviewActivity" />
         <activity android:name=".product.seller.SellerActivity" />
         <activity android:name=".payment.PaymentActivity" />
-        <activity android:name=".adapter.helper.ImageUploadContainerActivity"></activity>
+        <activity android:name=".transactions.ImageUploadContainerActivity"></activity>
     </application>
 
 </manifest>

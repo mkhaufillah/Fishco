@@ -70,6 +70,10 @@
     <string name="expired">Waktu tunggu</string>
     <string name="complaint">Komplain</string>
     <string name="deleted_deny">Tidak dapat dihapus ketika transaksi dalam kondisi aktif</string>
+    <string name="choose_image">Pilih Gambar</string>
+    <string name="wait_upload">% Terupload</string>
+    <string name="success_upload">Upload sukses</string>
+    <string name="fail_upload">Upload gagal</string>
 
     <!--category-->
     <string name="fish">Ikan</string>

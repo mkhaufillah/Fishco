@@ -6,6 +6,7 @@
 
 package id.fishco.fishco.transactions
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -28,6 +29,7 @@ import id.fishco.fishco.adapter.transactions.RvTransactionAdapter
 import id.fishco.fishco.model.TransactionContainer
 import id.fishco.fishco.data.Tag
 import id.fishco.fishco.adapter.transactions.RecyclerItemTouchHelperTransaction
+import id.fishco.fishco.data.Credential
 
 class TransactionsFragment : Fragment() {
     private val db = FirebaseFirestore.getInstance()
@@ -83,7 +85,7 @@ class TransactionsFragment : Fragment() {
 
     private fun recycler(view: View) {
         val recyclerTransactions = view.findViewById<RecyclerView>(R.id.rv_transactions)
-        adapter = RvTransactionAdapter(activity!!, context!!, transactions)
+        adapter = RvTransactionAdapter(this, activity!!, context!!, transactions)
         recyclerTransactions.adapter = adapter
         recyclerTransactions.setHasFixedSize(false)
         val linearLayoutManager = LinearLayoutManager(context)
@@ -152,4 +154,12 @@ class TransactionsFragment : Fragment() {
         }
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == Credential.CODE_UPLOAD && resultCode == Activity.RESULT_OK) {
+            transactions.clear()
+            adapter.notifyDataSetChanged()
+            loadData()
+        }
+    }
 }

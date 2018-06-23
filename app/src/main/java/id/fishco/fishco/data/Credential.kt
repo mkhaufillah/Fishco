@@ -15,5 +15,6 @@ class Credential {
         const val KEY_SHARE_ALT2 = "c1nt4y4n9t4ks4mp41y4n9k3du4"
         const val API_KEY_RO = "a5d84cd6db72c9dc5c6b468189598a4d"
         const val BASE_URL_RO = "https://api.rajaongkir.com/starter/"
+        const val CODE_UPLOAD = 1012
     }
 }
