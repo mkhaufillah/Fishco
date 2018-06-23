@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by mkhaufillah on 5/30/18 9:52 AM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~ Last modified 5/30/18 9:52 AM
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add_forums"
+        android:enabled="true"
+        android:icon="@drawable/ic_add_circle_black_24dp"
+        android:title="@string/add_forum"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/scan_id_forums"
+        android:enabled="true"
+        android:icon="@drawable/ic_crop_free_black_24dp"
+        android:title="@string/scan_id_forum"
+        app:showAsAction="ifRoom" />
+</menu>

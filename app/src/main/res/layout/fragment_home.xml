@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".home.HomeFragment"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/srl_home">
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary">
+
+                <TextView
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/banners"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:padding="16dp" />
+
+                <ImageView
+                    android:id="@+id/iv_banner_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/banners"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_more_horiz_black_24dp" />
+
+            </LinearLayout>
+
+            <ss.com.bannerslider.Slider
+                android:id="@+id/banner_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:slider_interval="7000"
+                app:slider_loopSlides="true"
+                app:slider_indicatorSize="12dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginBottom="1dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary">
+
+                <TextView
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/categories"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:padding="16dp" />
+
+                <ImageView
+                    android:id="@+id/iv_categories_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/categories"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_more_horiz_black_24dp" />
+
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:columnCount="4"
+                android:rowCount="1"
+                android:layout_marginBottom="1dp">
+
+                <ImageView
+                    android:id="@+id/iv_fish_cat"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/categories"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="24dp"
+                    android:src="@drawable/ic_fish_cat"/>
+
+                <ImageView
+                    android:id="@+id/iv_handmade_cat"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/categories"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="24dp"
+                    android:src="@drawable/ic_handmade_cat" />
+
+                <ImageView
+                    android:id="@+id/iv_snack_cat"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/categories"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="24dp"
+                    android:src="@drawable/ic_snack_cat" />
+
+                <ImageView
+                    android:id="@+id/iv_more_cat"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/categories"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="24dp"
+                    android:src="@drawable/ic_more_cat" />
+
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary">
+
+                <TextView
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/top_product"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:padding="16dp" />
+
+                <ImageView
+                    android:id="@+id/iv_top_products_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/top_product"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_more_horiz_black_24dp" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_top_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary"
+                android:layout_marginBottom="1dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

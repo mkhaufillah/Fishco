@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    tools:context=".auth.AuthActivity"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/app_name"
+        android:background="@color/colorPrimaryTransparent"/>
+
+    <LinearLayout
+        android:id="@+id/ln_forms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="20dp">
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_login_google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingBottom="10dp"
+            android:paddingEnd="20dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="20dp"
+            android:paddingStart="0dp"
+            android:paddingTop="10dp"
+            fancy:fb_defaultColor="@color/colorAccent"
+            fancy:fb_iconPosition="left"
+            fancy:fb_iconResource="@drawable/ic_google_light"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="@string/google"
+            fancy:fb_textColor="@color/colorPrimary" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_login_fb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingBottom="10dp"
+            android:paddingEnd="20dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="20dp"
+            android:paddingStart="0dp"
+            android:paddingTop="10dp"
+            fancy:fb_defaultColor="@color/colorFacebook"
+            fancy:fb_iconPosition="left"
+            fancy:fb_iconResource="@drawable/ic_facebook_light"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="@string/facebook"
+            fancy:fb_textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ln_forms"
+        android:padding="20dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

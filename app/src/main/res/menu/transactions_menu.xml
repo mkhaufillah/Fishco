@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by mkhaufillah on 5/30/18 9:55 AM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~ Last modified 5/30/18 9:55 AM
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/filter_transactions"
+        android:enabled="true"
+        android:icon="@drawable/ic_filter_list_black_24dp"
+        android:title="@string/filter_transactions"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/sort_transactions"
+        android:enabled="true"
+        android:icon="@drawable/ic_sort_black_24dp"
+        android:title="@string/sort_transactions"
+        app:showAsAction="ifRoom" />
+</menu>

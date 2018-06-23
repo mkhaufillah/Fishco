@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by mkhaufillah on 6/12/18 11:46 PM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~ Last modified 6/12/18 11:39 PM
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/favorite"
+        android:enabled="true"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="@string/favorite"
+        app:showAsAction="ifRoom"/>
+
+</menu>

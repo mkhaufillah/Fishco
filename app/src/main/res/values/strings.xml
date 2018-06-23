@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">Fishco</string>
+
+    <!--facebook id-->
+    <string name="facebook_app_id">1392557817556739</string>
+    <string name="fb_login_protocol_scheme">fb1392557817556739</string>
+
+    <!--custom string-->
+    <string name="facebook">Login dengan Facebook</string>
+    <string name="google">Login dengan Google</string>
+    <string name="error_auth">Gagal authentikasi, silahkan ulangi</string>
+    <string name="search">Cari produk nelayan</string>
+    <string name="home">Beranda</string>
+    <string name="forum">Forum</string>
+    <string name="transaction">Transaksi</string>
+    <string name="profile">Profil</string>
+    <string name="notifications">Notifikasi</string>
+    <string name="save">Simpan</string>
+    <string name="banners">Banner</string>
+    <string name="categories">Kategori</string>
+    <string name="top_product">Produk terbaik</string>
+    <string name="add_banner">Ajukan banner</string>
+    <string name="latest">Terbaru</string>
+    <string name="history">Riwayat</string>
+    <string name="fill_blank">Lengkapi form</string>
+    <string name="delete_confirm">Yakin ingin menghapus?</string>
+    <string name="success_deleted">sukses terhapus</string>
+    <string name="no_content">Maaf, Kami tidak menemukan apa yang ada cari</string>
+    <string name="error">Terjadi error, silahkan refresh halaman</string>
+    <string name="no_document">Dokumen tidak tersedia</string>
+    <string name="discussion">Diskusi</string>
+    <string name="review">Review</string>
+    <string name="seller">Penjual</string>
+    <string name="buy">Beli</string>
+    <string name="sold">Terjual</string>
+    <string name="see">Dilihat</string>
+    <string name="qty">Jumlah</string>
+    <string name="weight_produk">Berat</string>
+    <string name="category">Kategori</string>
+    <string name="location">Lokasi</string>
+    <string name="delimiter">\t:\t</string>
+    <string name="product">Produk</string>
+    <string name="confirm">Konfirmasi</string>
+    <string name="address_shipping">Alamat pengiriman</string>
+    <string name="address_change">Ubah alamat</string>
+    <string name="detail_buy">Detail informasi</string>
+    <string name="description">Deskripsi</string>
+    <string name="shipping_service">Layanan pengiriman</string>
+    <string name="courier">Kurir</string>
+    <string name="courier_type">Tipe kurir</string>
+    <string name="total_pay">Total pembayaran</string>
+    <string name="price_product">Harga produk</string>
+    <string name="default_one">1</string>
+    <string name="day">Hari</string>
+    <string name="add_forum">Tambah forum</string>
+    <string name="scan_id_forum">Scan id</string>
+    <string name="filter_transactions">Saring transaksi</string>
+    <string name="sort_transactions">Urutkan transaksi</string>
+    <string name="favorite">Favorite</string>
+    <string name="success_trans_save">Sukses menyimpan transaksi, silahkan lihat di halaman transaksi</string>
+    <string name="success_trans_pay">Sukses, silahkan konfirmasi pembayaran</string>
+    <string name="no_desc">Tidak ada deskripsi</string>
+    <string name="pay_method">Silahkan pilih metode pembayaran</string>
+    <string name="upload_receipt">Upload bukti trensfer</string>
+    <string name="transfer">Transfer</string>
+    <string name="time_is_out">Waktu Telah Berakhir</string>
+    <string name="track">Tracking</string>
+    <string name="question">Ajukan pertanyaan</string>
+    <string name="delivered_confirm">Konfirmasi barang diterima</string>
+    <string name="expired">Waktu tunggu</string>
+    <string name="complaint">Komplain</string>
+    <string name="deleted_deny">Tidak dapat dihapus ketika transaksi dalam kondisi aktif</string>
+
+    <!--category-->
+    <string name="fish">Ikan</string>
+    <string name="handmade">Kerajinan</string>
+    <string name="snack">Makanan</string>
+    <string name="more">Lainnya</string>
+
+    <!--convert string-->
+    <string name="just_now">baru saja</string>
+    <string name="a_minute_ago">beberapa menit yang lalu</string>
+    <string name="minutes_ago">menit yang lalu</string>
+    <string name="an_hour_ago">beberapa jam yang lalu</string>
+    <string name="hours_ago">jam yang lalu</string>
+    <string name="yesterday">kemarin</string>
+    <string name="days_ago">hari yang lalu</string>
+    <string name="th">rb</string>
+    <string name="m">jt</string>
+    <string name="b">m</string>
+    <string name="t">t</string>
+
+    <!--transaction-->
+    <string name="t01">Menunggu proses pembayaran dan konfirmasi</string>
+    <string name="t2">Pembayaran diterima, menunggu konfirmasi penjual</string>
+    <string name="t3">Sudah dikonfirmasi, menunggu proses pengiriman</string>
+    <string name="t4">Barang sudah dikirim dengan nomor resi </string>
+    <string name="t5">Barang sudah diterima, menunggu konfirmasi pembeli</string>
+    <string name="t6">Tranksaksi sukses</string>
+    <string name="tmin1">Tranksaksi gagal</string>
+    <string name="tmin2">Tranksaksi pending</string>
+    <string name="tmin3">Silahkan konfirmasi barang anda</string>
+</resources>

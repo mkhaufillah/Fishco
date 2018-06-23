@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by mkhaufillah on 6/14/18 11:01 AM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~ Last modified 6/14/18 11:01 AM
+  -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".product.buy.BuyActivity"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/top_bar_buy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/buy_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_buy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/ln_buy"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar_buy">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_shopping_cart_black_24dp"
+                    android:drawablePadding="16dp"
+                    android:drawableStart="@drawable/ic_shopping_cart_black_24dp"
+                    android:padding="16dp"
+                    android:textColor="@color/colorAccent"
+                    android:background="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/address_shipping"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:padding="16dp"/>
+
+                <TextView
+                    android:id="@+id/tv_address_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:padding="16dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/btn_address_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    fancy:fb_defaultColor="@color/colorAccent"
+                    fancy:fb_textColor="@color/colorPrimary"
+                    fancy:fb_text="@string/address_change"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detail_buy"
+                    android:textColor="@color/colorAccent"
+                    android:background="@color/colorPrimary"
+                    android:padding="16dp"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="beforeDescendants"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPrimary"
+                    android:padding="16dp">
+
+                    <EditText
+                        android:id="@+id/et_info_buy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/description"
+                        android:textColor="@color/colorAccent"
+                        android:inputType="text"
+                        android:textSize="16sp"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/ms__padding_left"
+                        android:paddingStart="@dimen/ms__padding_left"
+                        android:paddingRight="@dimen/ms__padding_left"
+                        android:paddingEnd="@dimen/ms__padding_left"
+                        android:paddingBottom="@dimen/ms__padding_top"
+                        android:paddingTop="@dimen/ms__padding_top"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/ms_qty_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/qty"
+                        app:ms_hint="@string/qty"
+                        app:ms_dropdown_max_height="350dp"
+                        app:ms_dropdown_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shipping_service"
+                    android:textColor="@color/colorAccent"
+                    android:background="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:padding="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/colorPrimary"
+                    android:padding="16dp">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/ms_courier_buy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/courier"
+                        app:ms_hint="@string/courier"
+                        app:ms_dropdown_max_height="350dp"
+                        app:ms_dropdown_height="wrap_content"/>
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/ms_courier_type_buy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/courier_type"
+                        app:ms_hint="@string/courier_type"
+                        app:ms_dropdown_max_height="350dp"
+                        app:ms_dropdown_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_pay"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    android:background="@color/colorPrimary"
+                    android:padding="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/price_product"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/courier"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_cost_shipping_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/total_pay"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_total_price_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_buy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_navigation_height"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_confirm_buy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            fancy:fb_defaultColor="@color/colorThird"
+            fancy:fb_textColor="@color/colorAccent"
+            fancy:fb_text="@string/confirm" />
+
+        <ImageView
+            android:id="@+id/iv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/colorAccent"
+            android:src="@drawable/ic_save_white_24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:contentDescription="@string/save"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

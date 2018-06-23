@@ -1,0 +1,11 @@
+<!--
+  ~ Created by mkhaufillah on 5/30/18 1:03 AM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~ Last modified 5/30/18 1:03 AM
+  -->
+
+<vector android:height="24dp" android:tint="#37474F"
+    android:viewportHeight="24.0" android:viewportWidth="24.0"
+    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#37474F" android:pathData="M10,20v-6h4v6h5v-8h3L12,3 2,12h3v8z"/>
+</vector>

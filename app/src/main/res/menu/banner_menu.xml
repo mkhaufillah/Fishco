@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by mkhaufillah on 6/5/18 9:24 PM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~ Last modified 6/5/18 9:24 PM
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add_banner"
+        android:enabled="true"
+        android:icon="@drawable/ic_add_circle_black_24dp"
+        android:title="@string/add_banner"
+        app:showAsAction="ifRoom"/>
+</menu>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by mkhaufillah on 5/29/18 10:02 PM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~ Last modified 5/6/18 11:43 AM
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/colorAccent" />
+    <item
+        android:drawable="@drawable/logo_light"
+        android:gravity="center"/>
+
+</layer-list>

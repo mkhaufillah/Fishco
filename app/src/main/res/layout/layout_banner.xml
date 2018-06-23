@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by mkhaufillah on 6/5/18 9:31 PM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~ Last modified 6/5/18 9:31 PM
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginBottom="1dp">
+
+    <ImageView
+        android:id="@+id/iv_banner"
+        android:src="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/top_product"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/colorFacebook"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:textSize="14sp"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/tv_expired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:textColor="@color/colorAccent"/>
+
+</LinearLayout>

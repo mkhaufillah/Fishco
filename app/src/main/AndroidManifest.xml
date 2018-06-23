@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.fishco.fishco">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Splash"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.fishco.id"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".auth.AuthActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".home.notifications.NotificationsActivity" />
+        <activity android:name=".home.favorites.FavoritesActivity" />
+        <activity android:name=".forums.addForums.AddForumsActivity" />
+        <activity android:name=".forums.scanIdForums.ScanIdForumsActivity" />
+        <activity android:name=".transactions.filterTransactions.FilterTransactionsActivity" />
+        <activity android:name=".transactions.sortTransactions.SortTransactionsActivity" />
+        <activity android:name=".product.ProductActivity" />
+        <activity android:name=".home.banner.BannerActivity" />
+        <activity android:name=".product.searchProduct.SearchProductActivity" />
+        <activity android:name=".home.search.SearchActivity" />
+        <activity android:name=".product.buy.BuyActivity" />
+        <activity android:name=".product.discussion.DiscussionActivity" />
+        <activity android:name=".product.review.ReviewActivity" />
+        <activity android:name=".product.seller.SellerActivity" />
+        <activity android:name=".payment.PaymentActivity" />
+        <activity android:name=".adapter.helper.ImageUploadContainerActivity"></activity>
+    </application>
+
+</manifest>

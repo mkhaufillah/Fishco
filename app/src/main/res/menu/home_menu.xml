@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by mkhaufillah on 5/30/18 7:08 AM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~ Last modified 5/30/18 7:08 AM
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/favorites_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="@string/favorite"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/notifications_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/notifications"
+        app:showAsAction="ifRoom" />
+</menu>

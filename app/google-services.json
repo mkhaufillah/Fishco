@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "447395415626",
+    "firebase_url": "https://fishco-ae6a9.firebaseio.com",
+    "project_id": "fishco-ae6a9",
+    "storage_bucket": "fishco-ae6a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447395415626:android:00f1bfa44cdadb13",
+        "android_client_info": {
+          "package_name": "id.fishco.fishco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447395415626-g279t6n3j0hq2d2qb0gf1i5n15gj7tbb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.fishco.fishco",
+            "certificate_hash": "0d5ef97be22b085f7982730830a82c1870f6f721"
+          }
+        },
+        {
+          "client_id": "447395415626-bvq74djmdgijiclh4f9j36kvfsrkih7o.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "447395415626-bvq74djmdgijiclh4f9j36kvfsrkih7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClhKY7TwcWXv7sTcnaomHRr2Iy2TuoSpk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447395415626-bvq74djmdgijiclh4f9j36kvfsrkih7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

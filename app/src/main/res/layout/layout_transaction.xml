@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by mkhaufillah on 6/21/18 10:02 AM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~ Last modified 6/21/18 10:02 AM
+  -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="1dp">
+
+    <TextView
+        android:id="@+id/tv_transaction_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical|end"
+        android:drawablePadding="16dp"
+        android:drawableEnd="@drawable/ic_delete_sweep_white_24dp"
+        android:drawableRight="@drawable/ic_delete_sweep_white_24dp"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/red"
+        android:text="@string/delete_confirm"
+        android:textAlignment="textEnd"
+        fancy:layout_constraintTop_toTopOf="@id/ln_transaction_foreground"
+        fancy:layout_constraintBottom_toBottomOf="@id/ln_transaction_foreground"
+        fancy:layout_constraintStart_toStartOf="parent"
+        fancy:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ln_transaction_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        fancy:layout_constraintEnd_toEndOf="parent"
+        fancy:layout_constraintStart_toStartOf="parent"
+        fancy:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/tv_transaction_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:stretchColumns="3">
+
+            <TableRow
+                android:padding="16dp">
+
+                <TextView
+                    android:text="@string/expired"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:text="@string/delimiter"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_transaction_exp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"/>
+            </TableRow>
+
+            <TableRow
+                android:padding="16dp">
+
+                <TextView
+                    android:text="@string/qty"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:text="@string/delimiter"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_transaction_qty"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:padding="16dp">
+
+                <TextView
+                    android:text="@string/description"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:text="@string/delimiter"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_transaction_desc"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:padding="16dp">
+
+                <TextView
+                    android:text="@string/address_shipping"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:text="@string/delimiter"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_transaction_address"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:padding="16dp">
+
+                <TextView
+                    android:text="@string/shipping_service"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:text="@string/delimiter"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_transaction_shipping"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:padding="16dp">
+
+                <TextView
+                    android:text="@string/total_pay"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:text="@string/delimiter"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_transaction_pay"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/tv_transaction_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/colorFacebook"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_transaction_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            fancy:fb_defaultColor="@color/colorThird"
+            fancy:fb_textColor="@color/colorAccent"
+            fancy:fb_text="@string/confirm"
+            fancy:fb_radius="30dp"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:visibility="gone"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_transaction_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            fancy:fb_defaultColor="@color/colorThird"
+            fancy:fb_textColor="@color/colorAccent"
+            fancy:fb_text="@string/upload_receipt"
+            fancy:fb_radius="30dp"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_transaction_upload_receipt"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:contentDescription="@string/upload_receipt"
+            android:scaleType="centerCrop"
+            android:layout_margin="16dp"
+            android:visibility="gone"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_transaction_track"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            fancy:fb_defaultColor="@color/colorSecondary"
+            fancy:fb_textColor="@color/colorAccent"
+            fancy:fb_text="@string/track"
+            fancy:fb_radius="30dp"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:visibility="gone"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_transaction_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            fancy:fb_defaultColor="@color/colorSecondary"
+            fancy:fb_textColor="@color/colorAccent"
+            fancy:fb_text="@string/question"
+            fancy:fb_radius="30dp"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:visibility="gone"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_transaction_delivered_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            fancy:fb_defaultColor="@color/colorThird"
+            fancy:fb_textColor="@color/colorAccent"
+            fancy:fb_text="@string/delivered_confirm"
+            fancy:fb_radius="30dp"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:visibility="gone"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_transaction_complain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            fancy:fb_defaultColor="@color/colorSecondary"
+            fancy:fb_textColor="@color/colorAccent"
+            fancy:fb_text="@string/complaint"
+            fancy:fb_radius="30dp"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
