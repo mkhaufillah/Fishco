@@ -22,5 +22,7 @@ open class Transaction {
     var payMethod: String? = null
     var exp: Date? = null
     var resi: String? = null
+    var imageConfirmReceiptStg: String? = null
+    var imageConfirmReceipt: String? = null
     var timestamp: Date? = null
 }
